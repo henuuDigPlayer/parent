@@ -27,8 +27,6 @@
     <spring-cloud.version>Finchley.SR2</spring-cloud.version>
     <start-class>com.data4truth.pi.Application</start-class>
 
-    <spring-kafka>2.1.10.RELEASE</spring-kafka>
-
   </properties>
 
   <dependencyManagement>
