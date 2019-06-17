@@ -1,1 +1,4 @@
+com\data4truth\pi\hystrix\ZuulFallback.class
 com\data4truth\pi\Application.class
+com\data4truth\pi\bean\BaseResponse.class
+com\data4truth\pi\hystrix\ZuulFallback$1.class
