@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_URL}
+          search-paths: '{application}'                             #git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: ${GIT_USERNAME}                                            # git仓库的账号
+          password: ${GIT_PWD}
+          skipSslValidation: true
+          force-pull: true
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+    stream:
+      kafka:
+        binder:
+          brokers: ${KAFKA_SERVERS}
+          defaultBrokerPort: 9092
+          zkNodes: ${ZK_SERVERS}
+          defaultZkPort: 2181
+server:
+  port: ${SERVER_PORT}
+eureka:
+  instance:
+    hostname: ${SERVER_HOSTNAME}
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${SERVER_PORT}
+    # 超过这个时间没有心跳，eurekaserver 删除该服务
+    lease-expiration-duration-in-seconds: 90
+    # 每隔30秒与注册中心心跳一次
+    lease-renewal-interval-in-seconds: 30
+  client:
+    healthcheck:
+      enabled: true
+#    # 刷新本地缓存
+#    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://${EUREKA_URL}:${EUREKA_PORT}/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

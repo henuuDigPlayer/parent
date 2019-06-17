@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8000
+eureka:
+  server:
+    # 关闭自我保护
+    enable-self-preservation: false
+    # 清理间隔时间
+    eviction-interval-timer-in-ms: 60000
+  client:
+    #是否将自己这个服务注册到EurekaServer中  默认True 此服务为Server
+    registerWithEureka: false
+    #是否从EurekaServer获取注册信息 默认True 单点ES不存在其他的EurkaServer,所以为False
+    fetchRegistry: false
+    serviceUrl:
+#      defaultZone: http://${EUREKA_URL}:${EUREKA_PORT}/eureka/
+      defaultZone: http://127.0.0.1:8000/eureka/

@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://183.131.202.182/medicalCenter/springcloud-config.git
+          search-paths: '{application}'                             #git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: lirt@data4truth.com                                            # git仓库的账号
+          password: Lrt1061599031
+          skipSslValidation: true
+          force-pull: true
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+    stream:
+      kafka:
+        binder:
+          brokers: 183.131.202.13,61.174.254.22
+          defaultBrokerPort: 9092
+          zkNodes: 183.131.202.13,61.174.254.22
+          defaultZkPort: 2181
+server:
+  port: 8001
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: 127.0.0.1
+#    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+    # 超过这个时间没有心跳，eurekaserver 删除该服务
+#    lease-expiration-duration-in-seconds: 90
+#    # 每隔30秒与注册中心心跳一次
+#    lease-renewal-interval-in-seconds: 30
+  client:
+#    healthcheck:
+#      enabled: true
+#    # 刷新本地缓存
+#    registry-fetch-interval-seconds: 5
+    service-url:
+#      defaultZone: http://${EUREKA_URL}:${EUREKA_PORT}/eureka/
+      defaultZone: http://127.0.0.1:8000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

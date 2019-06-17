@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: zuul-server
+  profile: it
+  cloud:
+    config:
+      profile: ${spring.profile}
+      discovery:
+        enabled: true
+        serviceId: config-server
+      name: ${spring.application.name}
+      label: master
+
+server:
+  port: 8009
+eureka:
+  instance:
+    hostname: 192.168..1.1
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:8009
+    # 超过这个时间没有心跳，eurekaserver 删除该服务
+    lease-expiration-duration-in-seconds: 30
+    # 每隔30秒与注册中心心跳一次
+    lease-renewal-interval-in-seconds: 10
+  client:
+    healthcheck:
+      enabled: true
+#    # 刷新本地缓存
+#    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://183.131.202.150:8000/eureka/
+
