@@ -2,7 +2,6 @@
 source ./config.sh
 application_name=$1
 port=$2
-profile=$3
 service_name="${application_name}-server"
 
 
@@ -14,7 +13,7 @@ if [ ! -z $containerId ]
   then docker stop $containerId && docker rm $containerId
 fi
 
-imageId=$(docker images | grep -E "${service_name}" | awk '{print $3}')
+imageId=$(docker images | grep -E "${service_name}" | awk '{print $1}')
 if [ ! -z $imageId ]
   then docker rmi $imageId
 fi
