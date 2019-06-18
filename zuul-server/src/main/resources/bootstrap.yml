@@ -10,8 +10,6 @@ spring:
         serviceId: config-server
       name: ${spring.application.name}
       label: master
-server:
-  port: ${SERVER_PORT}
 eureka:
   instance:
     hostname: ${SERVER_HOSTNAME}
