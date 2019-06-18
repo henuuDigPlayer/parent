@@ -16,15 +16,7 @@ eureka:
   instance:
     hostname: ${SERVER_HOSTNAME}
     instance-id: ${eureka.instance.hostname}:${spring.application.name}:${SERVER_PORT}
-    # 超过这个时间没有心跳，eurekaserver 删除该服务
-    lease-expiration-duration-in-seconds: 30
-    # 每隔30秒与注册中心心跳一次
-    lease-renewal-interval-in-seconds: 10
   client:
-    healthcheck:
-      enabled: true
-#    # 刷新本地缓存
-#    registry-fetch-interval-seconds: 5
     service-url:
       defaultZone: http://${EUREKA_URL}:${EUREKA_PORT}/eureka/
 
