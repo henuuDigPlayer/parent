@@ -17,6 +17,7 @@
     <module>eureka-server</module>
     <module>config-server</module>
     <module>zuul-server</module>
+    <module>ribbon-gray</module>
   </modules>
 
   <name>parent</name>
@@ -26,7 +27,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <spring-cloud.version>Finchley.SR2</spring-cloud.version>
     <start-class>com.data4truth.pi.Application</start-class>
-
   </properties>
 
   <dependencyManagement>

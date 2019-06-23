@@ -1,7 +1,7 @@
 spring:
   application:
     name: zuul-server
-  profile: ${PROFILE}
+  profile: dev
   cloud:
     config:
       profile: ${spring.profile}
@@ -12,9 +12,9 @@ spring:
       label: master
 eureka:
   instance:
-    hostname: ${SERVER_HOSTNAME}
-    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${SERVER_PORT}
+    hostname: 127.0.0.1
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:8006
   client:
     service-url:
-      defaultZone: http://${EUREKA_URL}:${EUREKA_PORT}/eureka/
+      defaultZone: http://127.0.0.1:8000/eureka/
 

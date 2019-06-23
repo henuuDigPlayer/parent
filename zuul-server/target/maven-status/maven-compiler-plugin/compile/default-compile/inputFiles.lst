@@ -1,4 +1,8 @@
+F:\workspace\parent\zuul-server\src\main\java\com\rule\ExcudeAnnotation.java
+F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\controller\ErrController.java
+F:\workspace\parent\zuul-server\src\main\java\com\rule\MyRule.java
 F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\bean\BaseResponse.java
 F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\Application.java
 F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\hystrix\ZuulFallback.java
 F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\util\PropertyUtil.java
+F:\workspace\parent\zuul-server\src\main\java\com\rule\MyRoundRobinRule.java

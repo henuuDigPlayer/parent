@@ -27,7 +27,7 @@ server:
 eureka:
   instance:
     hostname: 127.0.0.1
-    instance-id: ${eureka.instance.hostname}:${spring.application.name}:8009
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:8009:1.0-SNAPSHOT
     # 超过这个时间没有心跳，eurekaserver 删除该服务
     lease-expiration-duration-in-seconds: 90
     # 每隔30秒与注册中心心跳一次

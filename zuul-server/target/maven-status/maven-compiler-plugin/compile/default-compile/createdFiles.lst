@@ -1,5 +1,9 @@
 com\data4truth\pi\hystrix\ZuulFallback.class
+com\rule\MyRoundRobinRule.class
+com\data4truth\pi\controller\ErrController.class
 com\data4truth\pi\Application.class
 com\data4truth\pi\bean\BaseResponse.class
+com\rule\MyRule.class
 com\data4truth\pi\util\PropertyUtil.class
 com\data4truth\pi\hystrix\ZuulFallback$1.class
+com\rule\ExcudeAnnotation.class
