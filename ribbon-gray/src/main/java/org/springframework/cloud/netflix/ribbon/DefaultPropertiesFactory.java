@@ -1,13 +1,12 @@
 package org.springframework.cloud.netflix.ribbon;
 
-import com.netflix.client.config.IClientConfig;
-import com.netflix.config.ConfigurationManager;
 import com.netflix.loadbalancer.ServerListFilter;
 import com.netflix.loadbalancer.ILoadBalancer;
 import com.netflix.loadbalancer.IPing;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.ServerList;
-import org.apache.commons.configuration.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
@@ -20,9 +19,11 @@ import static org.springframework.cloud.netflix.ribbon.SpringClientFactory.NAMES
 /**
  * @author lindj
  * @date 2019/6/22 0022
- * @description
+ * @description 自定义PropertiesFactory
  */
 public class DefaultPropertiesFactory extends PropertiesFactory {
+
+    private static Logger LOGGER = LoggerFactory.getLogger(DefaultPropertiesFactory.class);
 
     @Autowired
     private Environment environment;
@@ -40,19 +41,17 @@ public class DefaultPropertiesFactory extends PropertiesFactory {
 
     @Override
     public String getClassName(Class clazz, String name) {
-        System.out.println("name:" + name+ ", clazz:" + clazz);
         String className = super.getClassName(clazz, name);
-        System.out.println("super className:" + className);
         // 读取全局配置
         if (!StringUtils.hasText(className) && this.classToProperty.containsKey(clazz)) {
             String classNameProperty = this.classToProperty.get(clazz);
             className = environment.getProperty(NAMESPACE + "." + classNameProperty);
-            System.out.println("className:" + className);
         }
+        LOGGER.info("className={}", className);
         return className;
     }
 
-    public static String getClientConfig(IClientConfig clientConfig, String key) {
+/*    public static String getClientConfig(IClientConfig clientConfig, String key) {
         String value = (String) clientConfig.getProperties().get(key);
         // 读取全局配置
         if (!StringUtils.hasText(value)) {
@@ -61,5 +60,5 @@ public class DefaultPropertiesFactory extends PropertiesFactory {
         }
 
         return value;
-    }
+    }*/
 }

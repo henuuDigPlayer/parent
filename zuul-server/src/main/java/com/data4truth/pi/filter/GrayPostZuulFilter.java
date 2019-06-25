@@ -1,6 +1,6 @@
 package com.data4truth.pi.filter;
 
-import com.data4truth.pi.core.CoreHeaderInterceptor;
+import com.data4truth.pi.interceptor.HeaderInterceptor;
 import com.netflix.zuul.ZuulFilter;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 
@@ -27,7 +27,7 @@ public class GrayPostZuulFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        CoreHeaderInterceptor.shutdownHystrixRequestContext();
+        HeaderInterceptor.shutdownHystrixRequestContext();
         return null;
     }
 }
