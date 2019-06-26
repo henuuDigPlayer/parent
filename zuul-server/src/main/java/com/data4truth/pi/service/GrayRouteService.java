@@ -6,6 +6,8 @@ import com.data4truth.pi.model.GrayRoute;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author lindj
  * @date 2019/6/24 0024
@@ -27,5 +29,15 @@ public class GrayRouteService {
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("server_id", serviceId);
         return this.grayRouteMapper.selectOne(queryWrapper);
+    }
+
+    /**
+     * 根据服务名称 查询服务配置
+     * @return GrayRoute
+     */
+    public List<GrayRoute> getGrayrouteList(){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("enable_gray", true);
+        return this.grayRouteMapper.selectList(queryWrapper);
     }
 }

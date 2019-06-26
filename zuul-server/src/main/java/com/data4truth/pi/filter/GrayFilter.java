@@ -1,12 +1,14 @@
 package com.data4truth.pi.filter;
 
 import com.alibaba.fastjson.JSON;
+import com.data4truth.pi.bean.GrayServer;
 import com.data4truth.pi.interceptor.HeaderInterceptor;
 import com.data4truth.pi.model.GrayRoute;
 import com.data4truth.pi.service.GrayIpService;
 import com.data4truth.pi.service.GrayOrgIdService;
 import com.data4truth.pi.service.GrayRouteService;
 import com.data4truth.pi.service.GrayUidService;
+import com.data4truth.pi.util.Base64Util;
 import com.data4truth.pi.util.IpUtil;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -17,7 +19,9 @@ import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.util.CollectionUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author lindj
@@ -28,6 +32,7 @@ public class GrayFilter extends ZuulFilter {
 
 
     private static final String HEADER_TOKEN = "token";
+    private static final String HEADER_UID = "uid";
     private static final Logger LOGGER = LoggerFactory.getLogger(GrayFilter.class);
 
     @Autowired
@@ -58,8 +63,7 @@ public class GrayFilter extends ZuulFilter {
     @Override
     public Object run() {
         RequestContext requestContext = RequestContext.getCurrentContext();
-        String token = requestContext.getRequest().getHeader(HEADER_TOKEN);
-        String uid = "1";
+        String uid = requestContext.getRequest().getHeader(HEADER_UID);
         String orgId = null;
         HttpServletRequest request = requestContext.getRequest();
         String servletPath = request.getServletPath();
@@ -73,12 +77,13 @@ public class GrayFilter extends ZuulFilter {
         LOGGER.info("serverId: {}", servletPath);
         LOGGER.info("ip: {}", ip);
 
-        String version = getVersion(uid, ip, orgId, servletPath);
-        LOGGER.info("version: {}", version);
+        Map<String, GrayServer> serverMap = getMap(ip, orgId, uid);
+        String serverStr = Base64Util.encode(JSON.toJSONString(serverMap));
+        LOGGER.info("serverStr: {}", serverStr);
         // zuul本身调用微服务
-        HeaderInterceptor.initHystrixRequestContext(version);
+        HeaderInterceptor.initHystrixRequestContext(serverStr);
         // 传递给后续微服务
-        requestContext.addZuulRequestHeader(HeaderInterceptor.HEADER_VERSION, version);
+        requestContext.addZuulRequestHeader(HeaderInterceptor.HEADER_SERVER, serverStr);
         return null;
     }
 
@@ -124,6 +129,7 @@ public class GrayFilter extends ZuulFilter {
         return false;
     }
 
+
     private boolean isExist(Object item, List<?> list) {
         if (!CollectionUtils.isEmpty(list)) {
             if (list.contains(item)) {
@@ -131,5 +137,33 @@ public class GrayFilter extends ZuulFilter {
             }
         }
         return false;
+    }
+
+    private Map<String, GrayServer> getMap(Long ip, String orgId, String uid) {
+        Boolean grayIp = this.isExist(ip, this.grayIpService.getGrayIpList());
+        Boolean grayOrgId = this.isExist(orgId, this.grayIpService.getGrayIpList());
+        Boolean grayUid = this.isExist(uid, this.grayIpService.getGrayIpList());
+
+        List<GrayRoute> list = this.grayRouteService.getGrayrouteList();
+
+        Map<String, GrayServer> map = new HashMap<String, GrayServer>();
+        if (!CollectionUtils.isEmpty(list)) {
+            GrayServer grayServer = null;
+            for (GrayRoute grayRoute : list) {
+                grayServer = new GrayServer();
+                boolean value = (grayRoute.getEnableGrayIp() && grayIp) || (grayRoute.getEnableGrayOrgId() && grayOrgId)
+                        || (grayRoute.getEnableGrayUid() && grayUid);
+                if (value) {
+                    grayServer.setRequestCanGray(true);
+                    grayServer.setCurrentVersion(grayRoute.getCurrentVersion());
+                    grayServer.setGrayVersion(grayRoute.getGrayVersion());
+                } else {
+                    grayServer.setRequestCanGray(false);
+                    grayServer.setCurrentVersion(grayRoute.getCurrentVersion());
+                }
+                map.put(grayRoute.getServerId(), grayServer);
+            }
+        }
+        return map;
     }
 }

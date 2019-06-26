@@ -2,43 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8315d4d8-8acc-4ca0-879b-18784448c2c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/bean/BeanConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/interceptor/HeaderInterceptorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/GrayRouteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/mapper/GrayIpMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/mapper/GrayOrgIdMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/mapper/GrayRouteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/mapper/GrayUidMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayIp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayOrgId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayRoute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayUid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayIpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayOrgIdService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayRouteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayUidService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/util/IpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/mapper/GrayIpMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/mapper/GrayOrgIdMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/mapper/GrayRouteMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/mapper/GrayUidMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/bean/GrayServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/util/Base64Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/CoreAutoConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/CoreFeignRequestInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/FeignRequestInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/CoreHeaderInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/HeaderInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/CoreHttpRequestInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/RestTemplateRequestInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/GrayMetadataRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/rule/GrayMetadataRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/RibbonLoadbalancerRuleConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RibbonRuleEnvironmentConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/RulePropertiesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RulePropertiesConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/org/springframework/cloud/netflix/ribbon/DefaultPropertiesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/org/springframework/cloud/netflix/ribbon/DefaultPropertiesFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/resources/rule.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/resources/rule.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ribbon-gray/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/FeignRequestInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/FeignRequestInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/HeaderInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/HeaderInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/RestTemplateRequestInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/RestTemplateRequestInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/rule/GrayMetadataRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/rule/GrayMetadataRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/ErrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/ErrController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayPostZuulFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayPostZuulFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/target/classes/com/data4truth/pi/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/target/classes/com/data4truth/pi/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayRouteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayRouteService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,108 +30,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/interceptor/HeaderInterceptorConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RibbonRuleEnvironmentConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RulePropertiesConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/FeignRequestInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/RestTemplateRequestInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/rule/GrayMetadataRule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-369">
-              <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/GrayRouteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayFilter.java">
+        <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/HeaderInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="138">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,10 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config-server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/rule/MyRoundRobinRule.java" />
-        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/rule/MyRule.java" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/rule/GrayMetadataRule.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/RulePropertiesConfig.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/resources/rule.properties" />
@@ -200,7 +74,6 @@
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/rule/MyRule.java" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayPostZuulFilter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/ribbon-gray/pom.xml" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/rule/MyRoundRobinRule.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/GrayMetadataRule.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/core/RibbonLoadbalancerRuleConfiguration.java" />
@@ -226,7 +99,6 @@
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayUidService.java" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/Application.java" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/GrayRouteController.java" />
-        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayRouteService.java" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/util/IpUtil.java" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayRoute.java" />
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/mapper/GrayRouteMapper.java" />
@@ -235,6 +107,12 @@
         <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayIpService.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RibbonRuleEnvironmentConfig.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/org/springframework/cloud/netflix/ribbon/DefaultPropertiesFactory.java" />
+        <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/util/Base64Util.java" />
+        <option value="$PROJECT_DIR$/ribbon-gray/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/hystrix/ZuulFallback.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/ErrController.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayRouteService.java" />
+        <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/bean/GrayServer.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/HeaderInterceptor.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/FeignRequestInterceptor.java" />
         <option value="$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/RestTemplateRequestInterceptor.java" />
@@ -256,9 +134,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="24" />
-    <option name="y" value="20" />
-    <option name="width" value="1772" />
+    <option name="x" value="-1882" />
+    <option name="y" value="44" />
+    <option name="width" value="1855" />
     <option name="height" value="979" />
   </component>
   <component name="ProjectView">
@@ -277,234 +155,93 @@
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parent" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="pi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.cloud:spring-cloud-netflix-ribbon:2.0.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.cloud:spring-cloud-netflix-ribbon:2.0.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="rule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.cloud:spring-cloud-netflix-ribbon:2.0.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
               <item name="ribbon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ribbon-gray" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.cloud:spring-cloud-netflix-ribbon:2.0.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="ribbon" type="462c0819:PsiDirectoryNode" />
+              <item name="okhttp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="hystrix" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="pi" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="parent" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.cloud:spring-cloud-netflix-ribbon:2.0.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="ribbon" type="462c0819:PsiDirectoryNode" />
+              <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -521,7 +258,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/zuul-server/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -530,20 +267,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\model" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.data4truth.pi.util" />
-      <recent name="com.data4truth.pi" />
-      <recent name="com.data4truth.pi.filter" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\workspace\parent\zuul-server\src\main\resources\mapper" />
       <recent name="F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\mapper" />
       <recent name="F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\model" />
       <recent name="F:\workspace\parent\ribbon-gray\src\main\resources" />
       <recent name="F:\workspace\parent\ribbon-gray\src\main\java\com\data4truth\pi\core" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.data4truth.pi.util" />
+      <recent name="com.data4truth.pi" />
+      <recent name="com.data4truth.pi.filter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\workspace\parent\zuul-server\src\main\java\com\data4truth\pi\model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -558,13 +295,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IpUtil">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.data4truth.pi.Application" />
       <module name="zuul-server" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.data4truth.pi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrayServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.data4truth.pi.bean.GrayServer" />
+      <module name="ribbon-gray" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.data4truth.pi.bean.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -621,8 +371,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.IpUtil" />
         <item itemvalue="Spring Boot.Application (1)" />
+        <item itemvalue="Application.GrayServer" />
+        <item itemvalue="Application.IpUtil" />
         <item itemvalue="Spring Boot.Application (2)" />
       </list>
     </recent_temporary>
@@ -656,7 +407,9 @@
       <workItem from="1560916031236" duration="2703000" />
       <workItem from="1560994061418" duration="11364000" />
       <workItem from="1561172922049" duration="32535000" />
-      <workItem from="1561341414689" duration="35453000" />
+      <workItem from="1561341414689" duration="44234000" />
+      <workItem from="1561513282961" duration="28085000" />
+      <workItem from="1561550608022" duration="829000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1560743632460</created>
@@ -728,17 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1561285572692</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="初始化">
+      <created>1561444015472</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1561444015472</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153326000" />
+    <option name="totallyTimeSpent" value="191021000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="20" width="1772" height="979" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1882" y="44" width="1855" height="979" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.314436" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2296544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -748,16 +507,16 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.321513" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22222222" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36406618" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4208038" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.53782505" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.5200946" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.2884161" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.25886524" />
@@ -792,193 +551,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="初始化" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/PropertiesFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/data4truth/pi/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/data4truth/pi/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/rule/MyRoundRobinRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/rule/MyRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/InterceptorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/SpringClientFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.5/ribbon-loadbalancer-2.2.5.jar!/com/netflix/loadbalancer/AbstractServerPredicate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/bean/BeanConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayPostZuulFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.10.RELEASE/spring-core-5.0.10.RELEASE.jar!/org/springframework/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-          <folding>
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/biz/biz.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/util/PropertyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayIp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayOrgId.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/model/GrayUid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/mapper/GrayUidMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/mapper/GrayOrgIdMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/mapper/GrayIpMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/mapper/GrayOrgIdMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/mapper/GrayIpMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.1.1/mybatis-plus-core-3.1.1.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225">
@@ -993,40 +566,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/ErrController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayRouteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/hystrix/ZuulFallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-796">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1101,26 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/org/springframework/cloud/netflix/ribbon/DefaultPropertiesFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/interceptor/HeaderInterceptorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/resources/rule.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1128,60 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RibbonRuleEnvironmentConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RulePropertiesConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/FeignRequestInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/HeaderInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/RestTemplateRequestInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/rule/GrayMetadataRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1198,10 +667,296 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/RibbonProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/okhttp/OkHttpStatusCodeException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/RibbonAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1089">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/support/RibbonCommandContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1875">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/RibbonLoadBalancerContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/support/RibbonRetryPolicy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/okhttp/OkHttpRibbonConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-ribbon/2.0.2.RELEASE/spring-cloud-netflix-ribbon-2.0.2.RELEASE.jar!/org/springframework/cloud/netflix/ribbon/okhttp/OkHttpRibbonRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.5/ribbon-loadbalancer-2.2.5.jar!/com/netflix/loadbalancer/AbstractServerPredicate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <element signature="e#2775#2776#0" expanded="true" />
+            <element signature="e#2822#2823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.5/ribbon-loadbalancer-2.2.5.jar!/com/netflix/loadbalancer/PredicateBasedRule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.5/ribbon-loadbalancer-2.2.5.jar!/com/netflix/loadbalancer/ZoneAvoidanceRule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/rule/MyRoundRobinRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.5/ribbon-loadbalancer-2.2.5.jar!/com/netflix/loadbalancer/ClientConfigEnabledRoundRobinRule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.5/ribbon-loadbalancer-2.2.5.jar!/com/netflix/loadbalancer/Server.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayPostZuulFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/org/springframework/cloud/netflix/ribbon/DefaultPropertiesFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/bean.java" />
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/hystrix/ZuulFallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/controller/ErrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/util/Base64Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/service/GrayRouteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/bean/BaseResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/bean/GrayServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/rule/GrayMetadataRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/filter/GrayFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+        <state relative-caret-position="1600">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/HeaderInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/interceptor/HeaderInterceptorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/RibbonRuleEnvironmentConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/config/bean/BeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/FeignRequestInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/src/main/java/com/data4truth/pi/interceptor/RestTemplateRequestInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ribbon-gray/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/data4truth/pi/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/data4truth/pi/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/data4truth/pi/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

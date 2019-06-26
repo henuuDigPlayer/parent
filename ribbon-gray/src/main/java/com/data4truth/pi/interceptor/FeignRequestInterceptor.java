@@ -14,10 +14,9 @@ public class FeignRequestInterceptor implements RequestInterceptor {
 
 	@Override
 	public void apply(RequestTemplate template) {
-        String hystrixVer = HeaderInterceptor.version.get();
-		LOGGER.info("fegin version:{} ",hystrixVer);
-        
-		template.header(HeaderInterceptor.HEADER_VERSION, hystrixVer);
+		String serverStr = HeaderInterceptor.serverStr.get();
+		template.header(HeaderInterceptor.HEADER_SERVER, serverStr);
+
 	}
 
 }

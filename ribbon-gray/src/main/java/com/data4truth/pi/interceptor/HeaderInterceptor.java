@@ -19,16 +19,16 @@ import javax.servlet.http.HttpServletResponse;
 public class HeaderInterceptor extends HandlerInterceptorAdapter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(HeaderInterceptor.class);
 
-	public static final String HEADER_VERSION = "version";
+	public static final String HEADER_SERVER = "server";
 
-	public static final HystrixRequestVariableDefault<String> version = new HystrixRequestVariableDefault<>();
+	public static final HystrixRequestVariableDefault<String> serverStr =
+			new HystrixRequestVariableDefault<>();
 
-	public static void initHystrixRequestContext(String headerVer) {
-		LOGGER.info("header version:{}", headerVer);
+	public static void initHystrixRequestContext(String serverStr) {
 		if (!HystrixRequestContext.isCurrentThreadInitialized()) {
 			HystrixRequestContext.initializeContext();
 		}
-		HeaderInterceptor.version.set(headerVer);
+		HeaderInterceptor.serverStr.set(serverStr);
 /*		if (!StringUtils.isEmpty(headerVer)) {
 			System.out.println("version");
 			HeaderInterceptor.version.set(headerVer);
@@ -46,7 +46,8 @@ public class HeaderInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		HeaderInterceptor.initHystrixRequestContext(request.getHeader(HeaderInterceptor.HEADER_VERSION));
+		String serverStr = request.getHeader(HeaderInterceptor.HEADER_SERVER);
+		HeaderInterceptor.initHystrixRequestContext(serverStr);
 		return true;
 	}
 

@@ -21,10 +21,8 @@ public class RestTemplateRequestInterceptor implements ClientHttpRequestIntercep
     @Override
     public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
         HttpRequestWrapper requestWrapper = new HttpRequestWrapper(request);
-
-        String hystrixVer = HeaderInterceptor.version.get();
-        LOGGER.info("restTemplate version:{} ", hystrixVer);
-        requestWrapper.getHeaders().add(HeaderInterceptor.HEADER_VERSION, hystrixVer);
+        String serverStr = HeaderInterceptor.serverStr.get();
+        requestWrapper.getHeaders().add(HeaderInterceptor.HEADER_SERVER, serverStr);
         return execution.execute(requestWrapper, body);
     }
 }
