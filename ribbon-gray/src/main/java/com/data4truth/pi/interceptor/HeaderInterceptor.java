@@ -3,6 +3,7 @@ package com.data4truth.pi.interceptor;
 
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestVariableDefault;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HeaderInterceptor extends HandlerInterceptorAdapter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(HeaderInterceptor.class);
 
-	public static final String HEADER_SERVER = "server";
+	public static final String HEADER_SERVER = "headerStr";
 
 	public static final HystrixRequestVariableDefault<String> serverStr =
 			new HystrixRequestVariableDefault<>();
@@ -47,6 +48,7 @@ public class HeaderInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		String serverStr = request.getHeader(HeaderInterceptor.HEADER_SERVER);
+		LOGGER.info("header serverStr:{}", serverStr);
 		HeaderInterceptor.initHystrixRequestContext(serverStr);
 		return true;
 	}
@@ -54,6 +56,7 @@ public class HeaderInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
+		LOGGER.info("shutdown");
 		HeaderInterceptor.shutdownHystrixRequestContext();
 	}
 }

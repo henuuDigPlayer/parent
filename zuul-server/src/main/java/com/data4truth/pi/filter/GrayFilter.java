@@ -69,14 +69,11 @@ public class GrayFilter extends ZuulFilter {
         String servletPath = request.getServletPath();
         servletPath = servletPath.substring(servletPath.indexOf("/") + 1);
         servletPath = servletPath.substring(0, servletPath.indexOf("/"));
-
         Long ip = IpUtil.ipToLong(IpUtil.getIp(request));
-
         LOGGER.info("uid:{}", uid);
         LOGGER.info("orgId:{}", orgId);
         LOGGER.info("serverId: {}", servletPath);
         LOGGER.info("ip: {}", ip);
-
         Map<String, GrayServer> serverMap = getMap(ip, orgId, uid);
         String serverStr = Base64Util.encode(JSON.toJSONString(serverMap));
         LOGGER.info("serverStr: {}", serverStr);
@@ -141,8 +138,8 @@ public class GrayFilter extends ZuulFilter {
 
     private Map<String, GrayServer> getMap(Long ip, String orgId, String uid) {
         Boolean grayIp = this.isExist(ip, this.grayIpService.getGrayIpList());
-        Boolean grayOrgId = this.isExist(orgId, this.grayIpService.getGrayIpList());
-        Boolean grayUid = this.isExist(uid, this.grayIpService.getGrayIpList());
+        Boolean grayOrgId = this.isExist(orgId, this.grayOrgIdService.getGrayOrgIdList());
+        Boolean grayUid = this.isExist(uid, this.grayUidService.getGrayUidList());
 
         List<GrayRoute> list = this.grayRouteService.getGrayrouteList();
 

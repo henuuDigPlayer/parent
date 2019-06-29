@@ -95,9 +95,9 @@ public class GrayMetadataRule extends ZoneAvoidanceRule {
 
     private GrayServer getGrayServer(String serverName) {
         String serverStr = Base64Util.decode2Sting(HeaderInterceptor.serverStr.get());
+        LOGGER.info("serverStr:{}", serverStr);
         GrayServer grayServer = JSON.parseObject(serverStr).getObject(serverName,
                 GrayServer.class);
-        System.out.println(grayServer);
         return grayServer;
     }
 

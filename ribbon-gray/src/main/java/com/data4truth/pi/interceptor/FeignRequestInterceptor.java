@@ -15,6 +15,7 @@ public class FeignRequestInterceptor implements RequestInterceptor {
 	@Override
 	public void apply(RequestTemplate template) {
 		String serverStr = HeaderInterceptor.serverStr.get();
+		LOGGER.info("feign serverStr:{}", serverStr);
 		template.header(HeaderInterceptor.HEADER_SERVER, serverStr);
 
 	}

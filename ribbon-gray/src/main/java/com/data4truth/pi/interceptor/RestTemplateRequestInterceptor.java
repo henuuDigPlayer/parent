@@ -22,6 +22,7 @@ public class RestTemplateRequestInterceptor implements ClientHttpRequestIntercep
     public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
         HttpRequestWrapper requestWrapper = new HttpRequestWrapper(request);
         String serverStr = HeaderInterceptor.serverStr.get();
+        LOGGER.info("restTemplate serverStr:{}", serverStr);
         requestWrapper.getHeaders().add(HeaderInterceptor.HEADER_SERVER, serverStr);
         return execution.execute(requestWrapper, body);
     }
