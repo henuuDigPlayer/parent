@@ -33,6 +33,7 @@ public class GrayFilter extends ZuulFilter {
 
     private static final String HEADER_TOKEN = "token";
     private static final String HEADER_UID = "uid";
+    private static final String HEADER_ORGID = "orgId";
     private static final Logger LOGGER = LoggerFactory.getLogger(GrayFilter.class);
 
     @Autowired
@@ -63,20 +64,23 @@ public class GrayFilter extends ZuulFilter {
     @Override
     public Object run() {
         RequestContext requestContext = RequestContext.getCurrentContext();
-        String uid = requestContext.getRequest().getHeader(HEADER_UID);
-        String orgId = null;
         HttpServletRequest request = requestContext.getRequest();
         String servletPath = request.getServletPath();
         servletPath = servletPath.substring(servletPath.indexOf("/") + 1);
         servletPath = servletPath.substring(0, servletPath.indexOf("/"));
         Long ip = IpUtil.ipToLong(IpUtil.getIp(request));
+
+        String uid = requestContext.getRequest().getHeader(HEADER_UID);
+        String orgId = requestContext.getRequest().getHeader(HEADER_ORGID);
+
         LOGGER.info("uid:{}", uid);
         LOGGER.info("orgId:{}", orgId);
         LOGGER.info("serverId: {}", servletPath);
         LOGGER.info("ip: {}", ip);
         Map<String, GrayServer> serverMap = getMap(ip, orgId, uid);
-        String serverStr = Base64Util.encode(JSON.toJSONString(serverMap));
-        LOGGER.info("serverStr: {}", serverStr);
+        String dbStr = JSON.toJSONString(serverMap);
+        String serverStr = Base64Util.encode(dbStr);
+        LOGGER.info("all server from db: {}", dbStr);
         // zuul本身调用微服务
         HeaderInterceptor.initHystrixRequestContext(serverStr);
         // 传递给后续微服务
@@ -85,45 +89,43 @@ public class GrayFilter extends ZuulFilter {
     }
 
     /**
-     * 获取请求服务版本
+     * 获取灰度服务信息
      *
-     * @param uid      用户id
-     * @param ip       用户ip
-     * @param orgId    所属机构id
-     * @param serverId 服务名称
-     * @return String 版本号
+     * @param ip    Long ip地址
+     * @param orgId String 机构id
+     * @param uid   String 用户id
+     * @return Map 服务名称与服务键值对
      */
-    private String getVersion(String uid, Long ip, String orgId, String serverId) {
-        GrayRoute grayRoute = this.grayRouteService.getGrayroute(serverId);
-        if (grayRoute != null) {
-            if (grayRoute.getEnableGray() && canGray(uid, ip, orgId, grayRoute)) {
-                return grayRoute.getGrayVersion();
+    private Map<String, GrayServer> getMap(Long ip, String orgId, String uid) {
+        List<GrayRoute> list = this.grayRouteService.getGrayrouteList();
+
+        Map<String, GrayServer> map = new HashMap<String, GrayServer>();
+        if (!CollectionUtils.isEmpty(list)) {
+            Boolean grayIp = this.isExist(ip, this.grayIpService.getGrayIpList());
+            Boolean grayOrgId = this.isExist(orgId, this.grayOrgIdService.getGrayOrgIdList());
+            Boolean grayUid = this.isExist(uid, this.grayUidService.getGrayUidList());
+
+            GrayServer grayServer = null;
+            for (GrayRoute grayRoute : list) {
+                grayServer = new GrayServer();
+                boolean value = (grayRoute.getEnableGrayIp() && grayIp) || (grayRoute.getEnableGrayOrgId() && grayOrgId)
+                        || (grayRoute.getEnableGrayUid() && grayUid);
+                if (grayRoute.getEnableGray()) {
+                    boolean result =
+                            (!grayRoute.getEnableGrayIp() && !grayRoute.getEnableGrayOrgId() && !grayRoute.getEnableGrayUid()) || value;
+                    if (result) {
+                        grayServer.setRequestCanGray(true);
+                        grayServer.setGrayVersion(grayRoute.getGrayVersion());
+                    } else {
+                        grayServer.setRequestCanGray(false);
+                        grayServer.setCurrentVersion(grayRoute.getCurrentVersion());
+                    }
+                    map.put(grayRoute.getServerId(), grayServer);
+                }
+
             }
-            return grayRoute.getCurrentVersion();
         }
-
-        return null;
-    }
-
-    /**
-     * 服务是否灰度
-     *
-     * @param uid       String 用户uid
-     * @param ip        Long 用户ip
-     * @param orgId     String 所属机构id
-     * @param grayRoute GrayRoute 路由实体
-     * @return boolean
-     */
-    private boolean canGray(String uid, Long ip, String orgId, GrayRoute grayRoute) {
-        if (grayRoute.getEnableGrayIp()) {
-            return this.isExist(ip, this.grayIpService.getGrayIpList());
-        } else if (grayRoute.getEnableGrayOrgId()) {
-            return this.isExist(orgId, this.grayOrgIdService.getGrayOrgIdList());
-        } else if (grayRoute.getEnableGrayUid()) {
-            return this.isExist(uid, this.grayUidService.getGrayUidList());
-        }
-
-        return false;
+        return map;
     }
 
 
@@ -134,33 +136,5 @@ public class GrayFilter extends ZuulFilter {
             }
         }
         return false;
-    }
-
-    private Map<String, GrayServer> getMap(Long ip, String orgId, String uid) {
-        Boolean grayIp = this.isExist(ip, this.grayIpService.getGrayIpList());
-        Boolean grayOrgId = this.isExist(orgId, this.grayOrgIdService.getGrayOrgIdList());
-        Boolean grayUid = this.isExist(uid, this.grayUidService.getGrayUidList());
-
-        List<GrayRoute> list = this.grayRouteService.getGrayrouteList();
-
-        Map<String, GrayServer> map = new HashMap<String, GrayServer>();
-        if (!CollectionUtils.isEmpty(list)) {
-            GrayServer grayServer = null;
-            for (GrayRoute grayRoute : list) {
-                grayServer = new GrayServer();
-                boolean value = (grayRoute.getEnableGrayIp() && grayIp) || (grayRoute.getEnableGrayOrgId() && grayOrgId)
-                        || (grayRoute.getEnableGrayUid() && grayUid);
-                if (value) {
-                    grayServer.setRequestCanGray(true);
-                    grayServer.setCurrentVersion(grayRoute.getCurrentVersion());
-                    grayServer.setGrayVersion(grayRoute.getGrayVersion());
-                } else {
-                    grayServer.setRequestCanGray(false);
-                    grayServer.setCurrentVersion(grayRoute.getCurrentVersion());
-                }
-                map.put(grayRoute.getServerId(), grayServer);
-            }
-        }
-        return map;
     }
 }
