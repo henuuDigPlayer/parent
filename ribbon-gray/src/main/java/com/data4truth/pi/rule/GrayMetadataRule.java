@@ -35,20 +35,20 @@ public class GrayMetadataRule extends ZoneAvoidanceRule {
         }
         String serverName = serverList.get(0).getMetaInfo().getServiceIdForDiscovery();
         LOGGER.info("serverName={}", serverName);
-        LOGGER.info("serverList: {}", JSON.toJSONString(serverList));
+        LOGGER.info("available server list: {}", JSON.toJSONString(serverList));
 
         GrayServer grayServer = getGrayServer(serverName);
         String headerVersion = getVersion(grayServer);
-        LOGGER.info("headerVersion: {}", headerVersion);
+        LOGGER.info("gray version: {}", headerVersion);
         boolean canGray = canGray(grayServer);
-        LOGGER.info("canGray:{}", canGray);
+        LOGGER.info("can gray ?: {}", canGray);
 
         List<Server> noMetaServerList = new ArrayList<>();
         List<Server> metaServerList = new ArrayList<>();
         for (Server server : serverList) {
             Map<String, String> metadata = ((DiscoveryEnabledServer) server).getInstanceInfo().getMetadata();
             String metaVersion = metadata.get(META_DATA_KEY_VERSION);
-            LOGGER.info("metaVersion: {}", metaVersion);
+            LOGGER.info("server version: {}", metaVersion);
             // version策略
             if (canGray) {
                 if(!StringUtils.isEmpty(metaVersion) && metaVersion.equals(headerVersion)){
@@ -66,11 +66,11 @@ public class GrayMetadataRule extends ZoneAvoidanceRule {
         }
         if (canGray) {
             Server server = originChoose(metaServerList, key);
-            LOGGER.info("MetaServer:  {}", JSON.toJSONString(server));
+            LOGGER.info("gray server:  {}", JSON.toJSONString(server));
             return server;
         }
         Server server = originChoose(noMetaServerList, key);
-        LOGGER.info("noMetaServer:  {}", JSON.toJSONString(server));
+        LOGGER.info("not gray server:  {}", JSON.toJSONString(server));
         return server;
     }
 
@@ -95,7 +95,7 @@ public class GrayMetadataRule extends ZoneAvoidanceRule {
 
     private GrayServer getGrayServer(String serverName) {
         String serverStr = Base64Util.decode2Sting(HeaderInterceptor.serverStr.get());
-        LOGGER.info("serverStr:{}", serverStr);
+        LOGGER.info("gray server header string:{}", serverStr);
         GrayServer grayServer = JSON.parseObject(serverStr).getObject(serverName,
                 GrayServer.class);
         return grayServer;

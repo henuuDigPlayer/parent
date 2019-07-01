@@ -51,14 +51,4 @@ public class DefaultPropertiesFactory extends PropertiesFactory {
         return className;
     }
 
-/*    public static String getClientConfig(IClientConfig clientConfig, String key) {
-        String value = (String) clientConfig.getProperties().get(key);
-        // 读取全局配置
-        if (!StringUtils.hasText(value)) {
-            Configuration subset = ConfigurationManager.getConfigInstance().subset(clientConfig.getNameSpace());
-            value = subset.getString(key);
-        }
-
-        return value;
-    }*/
 }

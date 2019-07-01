@@ -1,6 +1,7 @@
 package com.data4truth.pi.interceptor;
 
 
+import com.data4truth.pi.util.Base64Util;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestVariableDefault;
 import org.apache.commons.lang.StringUtils;
@@ -30,12 +31,6 @@ public class HeaderInterceptor extends HandlerInterceptorAdapter {
 			HystrixRequestContext.initializeContext();
 		}
 		HeaderInterceptor.serverStr.set(serverStr);
-/*		if (!StringUtils.isEmpty(headerVer)) {
-			System.out.println("version");
-			HeaderInterceptor.version.set(headerVer);
-		} else {
-			HeaderInterceptor.version.set("");
-		}*/
 	}
 
 	public static void shutdownHystrixRequestContext() {
@@ -48,7 +43,8 @@ public class HeaderInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		String serverStr = request.getHeader(HeaderInterceptor.HEADER_SERVER);
-		LOGGER.info("header serverStr:{}", serverStr);
+		LOGGER.info("gray server header string from header interceptor:{}",
+                Base64Util.decode2Sting(serverStr));
 		HeaderInterceptor.initHystrixRequestContext(serverStr);
 		return true;
 	}

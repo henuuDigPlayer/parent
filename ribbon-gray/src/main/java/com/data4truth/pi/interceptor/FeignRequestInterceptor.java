@@ -1,4 +1,5 @@
 package com.data4truth.pi.interceptor;
+import com.data4truth.pi.util.Base64Util;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.slf4j.Logger;
@@ -15,7 +16,7 @@ public class FeignRequestInterceptor implements RequestInterceptor {
 	@Override
 	public void apply(RequestTemplate template) {
 		String serverStr = HeaderInterceptor.serverStr.get();
-		LOGGER.info("feign serverStr:{}", serverStr);
+        LOGGER.info("gray server header string from feign:{}", Base64Util.decode2Sting(serverStr));
 		template.header(HeaderInterceptor.HEADER_SERVER, serverStr);
 
 	}
