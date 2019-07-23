@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-ADD zuul-server.jar zuul-server.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/zuul-server.jar"]
+ADD activity-server.jar activity-server.jar
+RUN echo "Asia/Shanghai" > /etc/timezone
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/activity-server.jar"]
