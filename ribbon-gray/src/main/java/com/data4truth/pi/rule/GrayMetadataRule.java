@@ -66,11 +66,11 @@ public class GrayMetadataRule extends ZoneAvoidanceRule {
         }
         if (canGray) {
             Server server = originChoose(metaServerList, key);
-            LOGGER.info("gray server:  {}", JSON.toJSONString(server));
+            LOGGER.info("gray server:  {}",  server.getHostPort());
             return server;
         }
         Server server = originChoose(noMetaServerList, key);
-        LOGGER.info("not gray server:  {}", JSON.toJSONString(server));
+        LOGGER.info("not gray server:  {}", server.getHostPort());
         return server;
     }
 
