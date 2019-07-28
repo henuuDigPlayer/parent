@@ -10,11 +10,11 @@ spring:
         serviceId: config-server
       name: ${spring.application.name}
       label: master
-eureka:
-  instance:
-    hostname: ${SERVER_HOSTNAME}
-    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${SERVER_PORT}
-  client:
-    service-url:
-      defaultZone: http://${EUREKA_URL}:8000/eureka/
+#eureka:
+#  instance:
+#    hostname: ${SERVER_HOSTNAME}
+#    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${SERVER_PORT}
+#  client:
+#    service-url:
+#      defaultZone: http://${EUREKA_URL}:8000/eureka/
 
