@@ -5,6 +5,16 @@ port=$2
 service_name="${application_name}-server"
 
 
+if [ -z $application_name ]
+  then echo "application_name  is null" &&  exit 1
+fi
+
+if [ -z $port ]
+  then echo "port  is null" &&  exit 1
+fi
+
+name=${service_name}"_"${port}"_"${image_version}
+
 echo "container is stoping and removing"
 
 containerId=$(docker ps -a | grep -E "${service_name}" | awk '{print $1}')
@@ -38,6 +48,6 @@ docker run -p ${port}:${port} \
        --env GIT_URL=${git_url} \
        --env GIT_USERNAME=${git_username} \
        --env GIT_PWD=${git_pwd} \
-       --name ${service_name} \
+       --name ${name} \
        -v /data/servers/logs/${service_name}/:/data/servers/logs/${service_name} \
-       -t ${service_name}:1.0-SNAPSHOT
+       -t ${service_name}:${image_version}
