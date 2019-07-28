@@ -10,8 +10,13 @@ echo "application=${application_name}"
 
 echo "image is building"
 cd ..
+#install common module first
+cd commons
 mvn clean install
-cd ${application_name}-server
+cd ../services/client
+mvn clean install
+#mvn clean install
+cd ../../services/${application_name}
 
 mvn clean package -Dmaven.test.skip=true docker:build
 
